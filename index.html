@@ -21,6 +21,7 @@
             }
         }
     </script>
+
     <style>
         .floating-btn {
             position: fixed;
@@ -93,9 +94,18 @@
                 class="hidden md:block bg-royalblue text-white px-6 py-2 rounded hover:bg-blue-700 transition">
                 Quero Aumentar Vendas
             </a>
-            <button class="md:hidden text-royalblue text-2xl">
+            <button id="mobile-menu-button" class="md:hidden text-royalblue text-2xl">
                 <i class="fas fa-bars"></i>
             </button>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden flex flex-col space-y-4 mt-4" style="padding-left: 15px;">
+            <a href=" #solucao" class="hover:text-royalblue transition">Solução</a>
+            <a href="#beneficios" class="hover:text-royalblue transition">Benefícios</a>
+            <a href="#como-funciona" class="hover:text-royalblue transition">Como Funciona</a>
+            <a href="#planos" class="hover:text-royalblue transition">Planos</a>
+            <a href="#contato" class="bg-royalblue text-white px-4 py-2 rounded hover:bg-blue-700 transition mr-4">
+                Quero Aumentar Vendas
+            </a>
         </div>
     </header>
 
@@ -275,7 +285,7 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-lg shadow-md text-center">
-                    <div class="text-4xl font-bold text-royalblue mb-4">1</div>
+                    <!--<div class="text-4xl font-bold text-royalblue mb-4">1</div>-->
                     <div class="feature-icon bg-royalblue bg-opacity-10 text-royalblue mb-4 mx-auto">
                         <i class="fas fa-clipboard-check text-2xl"></i>
                     </div>
@@ -284,7 +294,7 @@
                         oportunidades de melhoria.</p>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-md text-center">
-                    <div class="text-4xl font-bold text-royalblue mb-4">2</div>
+                    <!--<div class="text-4xl font-bold text-royalblue mb-4">2</div>-->
                     <div class="feature-icon bg-royalblue bg-opacity-10 text-royalblue mb-4 mx-auto">
                         <i class="fas fa-chess text-2xl"></i>
                     </div>
@@ -293,7 +303,7 @@
                         específicos.</p>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-md text-center">
-                    <div class="text-4xl font-bold text-royalblue mb-4">3</div>
+                    <!-- <div class="text-4xl font-bold text-royalblue mb-4">3</div>-->
                     <div class="feature-icon bg-royalblue bg-opacity-10 text-royalblue mb-4 mx-auto">
                         <i class="fas fa-chart-pie text-2xl"></i>
                     </div>
@@ -656,11 +666,11 @@
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i class="fas fa-phone-alt mr-2 mt-1"></i>
-                            <span>(11) 99999-9999</span>
+                            <span>(27) 99781-1981</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-envelope mr-2 mt-1"></i>
-                            <span>contato@admais.com.br</span>
+                            <span>admaisoficial@gmail.com</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
@@ -671,15 +681,16 @@
                 <div>
                     <h3 class="text-lg font-bold mb-4">Redes Sociais</h3>
                     <div class="flex space-x-4">
-                        <a href="#"
+                        <!-- <a href="#"
                             class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-royalblue transition">
                             <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#"
+                        </a>-->
+                        <!--<a href="#"
                             class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-blue-400 transition">
                             <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#"
+                        </a>-->
+                        <a href="https://www.instagram.com/admais_ofc/?utm_source=ig_web_button_share_sheet"
+                            target="_blank" rel="noopener noreferrer"
                             class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-pink-600 transition">
                             <i class="fab fa-instagram"></i>
                         </a>
@@ -733,13 +744,20 @@
             });
         });
 
-        // Mobile Menu Toggle (would need implementation)
-
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             updateCountdown();
         });
     </script>
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
 </body>
 
 </html>
